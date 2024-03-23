@@ -60,12 +60,21 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
-                '}';
+        if (age.isPresent()){
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", age=" + age +
+                    ", address='" + address + '\'' +
+                    '}';
+        }else {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", address='" + address + '\'' +
+                    '}';
+        }
+
     }
 
     @Override
